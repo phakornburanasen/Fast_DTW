@@ -1,0 +1,3 @@
+2026-07-10T08:36:05+0700 INFO [job_id=dtw-20260710-083605-c2488bfe] [status=VALIDATING] Waiting for exclusive DTW runner lock.
+2026-07-10T08:36:05+0700 INFO [job_id=dtw-20260710-083605-c2488bfe] [status=VALIDATING] Validating DTW runner inputs.
+2026-07-10T08:36:05+0700 ERROR [job_id=dtw-20260710-083605-c2488bfe] [status=FAILED] Batch file not found: 'C:\Users\user\AppData\Local\Temp\pytest-of-t9058\pytest-1\test_run_dtw_batch_validates_r0\missing.bat'

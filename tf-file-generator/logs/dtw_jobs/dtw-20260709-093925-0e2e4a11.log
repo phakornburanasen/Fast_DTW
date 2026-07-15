@@ -1,0 +1,9 @@
+2026-07-09T09:39:25+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=VALIDATING] Waiting for exclusive DTW runner lock.
+2026-07-09T09:39:25+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=VALIDATING] Validating DTW runner inputs.
+2026-07-09T09:39:25+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=CLEAN_TEMP] Clearing system temp directory.
+2026-07-09T09:39:26+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=CLEAN_TEMP] Temp cleanup completed. deleted=25, skipped=57
+2026-07-09T09:39:26+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=START_DTW] Launching DTW process.
+2026-07-09T09:39:26+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=DTW_RUNNING] DTW started. pid=14860
+2026-07-09T09:39:26+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=WAITING_IMPORT] Waiting for DTW process to finish. timeout_seconds=1800
+2026-07-09T09:39:52+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=VERIFY_RESULT] Verifying DTW result.
+2026-07-09T09:39:52+0700 INFO [job_id=dtw-20260709-093925-0e2e4a11] [status=SUCCESS] DTW completed successfully.

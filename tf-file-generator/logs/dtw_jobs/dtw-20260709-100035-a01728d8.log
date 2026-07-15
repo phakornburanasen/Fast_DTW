@@ -1,0 +1,10 @@
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=VALIDATING] Waiting for exclusive DTW runner lock.
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=VALIDATING] Validating DTW runner inputs.
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=CLEAN_TEMP] Clearing system temp directory.
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=CLEAN_TEMP] Temp cleanup completed. deleted=0, skipped=0
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=START_DTW] Launching DTW process.
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=DTW_RUNNING] DTW started. pid=16932
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=WAITING_IMPORT] Waiting for DTW process to finish. timeout_seconds=1800
+2026-07-09T10:00:35+0700 WARNING [job_id=dtw-20260709-100035-a01728d8] [status=WAITING_IMPORT] DTW exited during startup window with code=7.
+2026-07-09T10:00:35+0700 INFO [job_id=dtw-20260709-100035-a01728d8] [status=VERIFY_RESULT] Verifying DTW result.
+2026-07-09T10:00:35+0700 ERROR [job_id=dtw-20260709-100035-a01728d8] [status=FAILED] DTW completed with verification errors. DTW exited with code 7.; stdout failure; stderr failure stdout='stdout failure' stderr='stderr failure'

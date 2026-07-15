@@ -1,0 +1,8 @@
+[tf_generator] Starting 4 workers on http://0.0.0.0:60000
+[tf_generator] Press Ctrl+C to stop all workers
+[tf_generator] Worker 1 started (pid=12216)
+[tf_generator] Worker 2 started (pid=39004)
+[tf_generator] Worker 3 started (pid=19776)
+[tf_generator] Worker 4 started (pid=21084)
+INFO:     127.0.0.1:60113 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64641 - "GET /docs HTTP/1.1" 200 OK

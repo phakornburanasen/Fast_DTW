@@ -1,0 +1,6 @@
+[tf_generator] Starting 4 workers on http://0.0.0.0:60001
+[tf_generator] Press Ctrl+C to stop all workers
+[tf_generator] Worker 1 started (pid=7856)
+[tf_generator] Worker 2 started (pid=8524)
+[tf_generator] Worker 3 started (pid=7436)
+[tf_generator] Worker 4 started (pid=13448)
