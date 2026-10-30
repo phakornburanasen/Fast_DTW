@@ -5,6 +5,16 @@ from typing import Any, List, Optional
 
 from pydantic import BaseModel, field_validator
 
+MODE_DEV_SUFFIX = "{Mode Dev}"
+
+
+def _append_mode_dev(value: Any) -> str:
+    """Append the dev suffix once for non-empty requested_by values."""
+    text = "" if value is None else str(value).strip()
+    if not text or MODE_DEV_SUFFIX in text:
+        return text
+    return f"{text} {MODE_DEV_SUFFIX}"
+
 
 # ---------------------------------------------------------------------------
 # head_csv — one per document
@@ -105,6 +115,11 @@ class TFRequest(BaseModel):
         if len(v) == 0:
             raise ValueError("documents must contain at least one item")
         return v
+
+    @field_validator("requested_by")
+    @classmethod
+    def append_mode_dev_to_requested_by(cls, value: str) -> str:
+        return _append_mode_dev(value)
 
 
 # ---------------------------------------------------------------------------

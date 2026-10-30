@@ -144,7 +144,7 @@ class TestGenerateTfEndpoint:
         assert "job_id" in body
         assert body["status"] == "COMPLETED"
         assert body["request_id"] == VALID_PAYLOAD["request_id"]
-        assert body["request_by"] == VALID_PAYLOAD["requested_by"]
+        assert body["request_by"] == "T9334 {Mode Dev}"
         assert body["completed_at"]
         assert "steps" in body
         assert any(step["step"] == "4_run_batch" for step in body["steps"])
@@ -157,6 +157,21 @@ class TestGenerateTfEndpoint:
     def test_log_received_called(self, override_output_dir):
         client.post("/generate-tf", json=VALID_PAYLOAD)
         router_module._log_service.log_received.assert_called_once()
+
+    def test_backend_appends_mode_dev_to_requested_by(self, override_output_dir):
+        client.post("/generate-tf", json=VALID_PAYLOAD)
+        request = router_module._log_service.log_received.call_args.args[0]
+        assert request.requested_by == "T9334 {Mode Dev}"
+
+    def test_backend_appends_mode_dev_to_any_requested_by_value(self, override_output_dir):
+        payload = {**VALID_PAYLOAD, "requested_by": "DEV-USER-01"}
+        body = client.post("/generate-tf", json=payload).json()
+        assert body["request_by"] == "DEV-USER-01 {Mode Dev}"
+
+    def test_backend_does_not_duplicate_mode_dev_suffix(self, override_output_dir):
+        payload = {**VALID_PAYLOAD, "requested_by": "ANYONE {Mode Dev}"}
+        body = client.post("/generate-tf", json=payload).json()
+        assert body["request_by"] == "ANYONE {Mode Dev}"
 
 
 # ---------------------------------------------------------------------------

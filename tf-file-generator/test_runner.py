@@ -8,8 +8,8 @@ import json
 import requests
 
 # Default: server runs on port 60001.
-# Override with: python test_runner.py --url http://10.115.2.61:60001/api/DTW_Service
-DEFAULT_URL = "http://10.115.2.61:60000/api/DTW_Service"
+# Override with: python test_runner.py --url http://10.115.2.74:60001/api/DTW_Service
+DEFAULT_URL = "http://10.115.2.74:60000/api/DTW_Service"
 
 PAYLOAD = {
     "request_id": "b7a8f1b0-7df2-4c8e-9e4c-26070001",
